@@ -10,6 +10,6 @@
     {% endif %}
 
     {% for category in categories %}
-        <h3><a href="{% url 'category-view' category.id %}">{{ category.title }}</a></h3>
+        <h3><a href="{% url 'category:view' category.id %}">{{ category.title }}</a></h3>
     {% endfor %}
 {% endblock content %}
