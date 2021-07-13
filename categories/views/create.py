@@ -5,7 +5,7 @@ from categories.forms import CategoryForm
 from categories.models import Category
 
 
-class CreateCategoryView(CreateView):
+class CategoryCreateView(CreateView):
     template_name = 'categories/create.html'
     form_class = CategoryForm
     model = Category
