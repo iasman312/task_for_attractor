@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Все категории{% endblock title %}
+
+{% block page_header %}Все категории{% endblock page_header %}
+
+{% block content %}
+    {% if not categories %}
+        <h2>НЕТ КАТЕГОРИЙ</h2>
+    {% endif %}
+
+    {% for category in categories %}
+        <h3><a href="">{{ category.title }}</a></h3>
+    {% endfor %}
+{% endblock content %}
