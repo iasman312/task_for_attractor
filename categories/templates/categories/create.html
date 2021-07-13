@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block page_header %}Добавить категорий{% endblock page_header %}
+
+{% block content %}
+    <form action="" method="post">
+        {% include "partial/form.html" with button_text="Создать категорий" %}
+    </form>
+{% endblock content %}
