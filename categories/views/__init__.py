@@ -1,0 +1,1 @@
+from categories.views.list import IndexView
