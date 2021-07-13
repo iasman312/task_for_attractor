@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block page_header %}Редактирвоать категорий {{ article.id }}{% endblock page_header %}
+
+{% block content %}
+    <form action="" method="post">
+        {% include "partial/form.html" with button_text="Редактировать категорий" %}
+    </form>
+{% endblock content %}
