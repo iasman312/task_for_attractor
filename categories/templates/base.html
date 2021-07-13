@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Хороший портал{% endblock title %}</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{% block page_header %}Все категории{% endblock page_header %}</h1>
+        {% block content %}{% endblock content %}
+    </div>
+</body>
+</html>
