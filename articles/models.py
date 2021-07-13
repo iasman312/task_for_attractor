@@ -37,3 +37,11 @@ class Article(models.Model):
         blank=True,
         verbose_name='Картинка'
     )
+
+    class Meta:
+        db_table = 'articles'
+        verbose_name = 'Статья'
+        verbose_name_plural = 'Статьи'
+
+    def __str__(self):
+        return self.title
