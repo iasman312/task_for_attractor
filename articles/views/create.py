@@ -7,7 +7,7 @@ from articles.models import Article
 from categories.models import Category
 
 
-class ArticleCreate(CreateView):
+class ArticleCreateView(CreateView):
     template_name = 'articles/create.html'
     form_class = ArticleForm
     model = Article
