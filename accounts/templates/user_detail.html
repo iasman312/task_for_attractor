@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Профиль пользователя {{ user_obj.username }}{% endblock %}
+{% block page_header %}Личная страница пользователя {{ user_obj.username }}{% endblock %}
+
+
+{% block content %}
+    <p>Имя пользователя: {{ user_obj.username }}</p>
+{% endblock %}
