@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 
 from categories.views import (
     IndexView,
@@ -15,5 +15,6 @@ urlpatterns = [
     path('create/', CategoryCreateView.as_view(), name='create'),
     path('<int:pk>/', CategoryView.as_view(), name='view'),
     path('<int:pk>/update/', CategoryUpdateView.as_view(), name='update'),
-    path('<int:pk>/delete/', CategoryDeleteView.as_view(), name='delete')
+    path('<int:pk>/delete/', CategoryDeleteView.as_view(), name='delete'),
+    path('<int:pk>/', include('articles.urls')),
 ]
