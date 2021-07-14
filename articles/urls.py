@@ -1,8 +1,9 @@
 from django.urls import path
-from articles.views import ArticleCreate
+from articles.views import ArticleCreateView, ArticleUpdateView
 
 app_name = 'article'
 
 urlpatterns = [
-    path('articles/create', ArticleCreate.as_view(), name='create'),
+    path('articles/create/', ArticleCreateView.as_view(), name='create'),
+    path('articles/update/', ArticleUpdateView.as_view(), name='update'),
 ]
