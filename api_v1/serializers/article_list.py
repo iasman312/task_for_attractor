@@ -7,9 +7,11 @@ class ArticlesSerializer(serializers.ModelSerializer):
 
     class Meta:
         fields = (
+            'id',
             'title',
             'description',
             'user',
             'category',
+            'image',
         )
         model = Article

@@ -8,6 +8,7 @@ class CategoriesSerializer(serializers.ModelSerializer):
 
     class Meta:
         fields = (
+            'id',
             'title',
             'articles',
         )
