@@ -85,6 +85,7 @@ ___
 
 Добавил пример заполнения env файла:
 SECRET_KEY=django-insecure-$bw-@604nr@!ljl##b*v+0!aahu-bw^k0+zp1--0l&g2@*lu5j
+
 ALLOWED_HOSTS=*
 DB_HOST=localhost
 DB_PORT=5432
