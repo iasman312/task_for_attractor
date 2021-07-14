@@ -1,0 +1,74 @@
+[
+{
+  "model": "categories.category",
+  "pk": 1,
+  "fields": {
+    "title": "Спорт"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 2,
+  "fields": {
+    "title": "Наука"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 3,
+  "fields": {
+    "title": "Юмор"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 4,
+  "fields": {
+    "title": "Бизнес"
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 1,
+  "fields": {
+    "category": 2,
+    "user": null,
+    "title": "Илон Маск не смог полететь на Марс",
+    "description": "Это чистая правда!!!",
+    "image": "images/1b4de4336e196eb2f0b03caf177f7318c3058b17.jpg"
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "user": null,
+    "title": "Криштиану Роналду не смог реализовать пенальти",
+    "description": "Это было неожиданно, потому что он уже долгое время не промахивался.",
+    "image": "images/large.jpg"
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 3,
+  "fields": {
+    "category": 3,
+    "user": null,
+    "title": "Анекдот",
+    "description": "Колобок повесился)))",
+    "image": "images/maxresdefault.jpg"
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 4,
+  "fields": {
+    "category": 1,
+    "user": 2,
+    "title": "fafafa",
+    "description": "fafafafafafa",
+    "image": "images/maxresdefault_mSvkpuZ.jpg"
+  }
+}
+]
