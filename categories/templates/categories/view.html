@@ -1,11 +1,30 @@
 {% extends "base.html" %}
 
+{% block menu %}
+    <li><a href="{% url "category:create" %}">Создать категорий</a></li>
+    <li><a href="{% url "category:update" category.id %}">Редактировать категорий</a></li>
+    <li><a href="{% url "category:delete" category.id %}">Удалить категорий</a></li>
+    <li><a href="{% url "category:article:create" category.id %}">Добавить статью</a></li>
+{% endblock menu %}
+
 {% block content %}
-    <h2>Articles:</h2>
-    {% for article in category.articles.all %}
-        <p>{{ article.title }}</p>
-        <p>{{ article.description }}</p>
-    {% empty %}
-        <p>Нет статей :(</p>
-    {% endfor %}
+    <h2>Статьи:</h2>
+        <div class="row">
+        {% for article in category.articles.all %}
+            <div class="card col-md-4 mr-2" style="width: 18rem; margin-bottom: 30px;">
+                <img class="card-img-top" src="{{ article.image.url }}" alt="Картинка статьи">
+                <div class="card-body">
+                    <h5 class="card-title">{{ article.title }}</h5>
+                    <p class="card-text">{{ article.description }}</p>
+                    <a href="{% url "category:article:update" article.id %}" class="btn btn-primary">Редактировать</a>
+                    <a href="{% url "category:article:delete" article.id %}" class="btn btn-danger">Удалить</a>
+                </div>
+            </div>
+        {% empty %}
+            <p>Нет статей :(</p>
+        {% endfor %}
+        </div>
 {% endblock content %}
+
+
+

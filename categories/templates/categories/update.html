@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% block menu %}<li><a href="{% url "category:view" category.id %}">Вернуться к категорию</a></li>{% endblock menu %}
 {% block page_header %}Редактирвоать категорий {{ category.id }}{% endblock page_header %}
 
 {% block content %}

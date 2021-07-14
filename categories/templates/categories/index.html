@@ -4,12 +4,18 @@
 
 {% block page_header %}Все категории{% endblock page_header %}
 
+{% block menu %}
+    <li><a href="{% url "category:create" %}">Создать категорий</a></li>
+{% endblock menu %}
+
 {% block content %}
     {% if not categories %}
         <h2>НЕТ КАТЕГОРИЙ</h2>
     {% endif %}
 
-    {% for category in categories %}
-        <h3><a href="{% url 'category:view' category.id %}">{{ category.title }}</a></h3>
-    {% endfor %}
+    <div class="list-group">
+        {% for category in categories %}
+            <a href="{% url 'category:view' category.id %}" class="list-group-item list-group-item-action">{{ category.title }}</a>
+        {% endfor %}
+    </div>
 {% endblock content %}
