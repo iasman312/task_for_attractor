@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.views.generic import CreateView
@@ -7,7 +8,7 @@ from articles.models import Article
 from categories.models import Category
 
 
-class ArticleCreateView(CreateView):
+class ArticleCreateView(LoginRequiredMixin, CreateView):
     template_name = 'articles/create.html'
     form_class = ArticleForm
     model = Article

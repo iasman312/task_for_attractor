@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
@@ -5,7 +6,7 @@ from categories.forms import CategoryForm
 from categories.models import Category
 
 
-class CategoryCreateView(CreateView):
+class CategoryCreateView(LoginRequiredMixin, CreateView):
     template_name = 'categories/create.html'
     form_class = CategoryForm
     model = Category

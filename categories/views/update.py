@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.views.generic import UpdateView
 
@@ -5,7 +6,7 @@ from categories.forms import CategoryForm
 from categories.models import Category
 
 
-class CategoryUpdateView(UpdateView):
+class CategoryUpdateView(LoginRequiredMixin, UpdateView):
     form_class = CategoryForm
     model = Category
     template_name = 'categories/update.html'

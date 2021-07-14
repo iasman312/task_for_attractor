@@ -1,11 +1,12 @@
 from django.contrib.auth import get_user_model, update_session_auth_hash
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.views.generic import UpdateView
 
 from accounts.forms import UserChangePasswordForm
 
 
-class UserChangePasswordView(UpdateView):
+class UserChangePasswordView(LoginRequiredMixin, UpdateView):
     template_name = 'user_change_password.html'
     model = get_user_model()
     form_class = UserChangePasswordForm
